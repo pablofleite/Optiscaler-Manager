@@ -7,7 +7,7 @@
     <x:String x:Key="TxtAppPrefs">App Preferences</x:String>
     <x:String x:Key="TxtCacheMgmt">Local cache management</x:String>
     <x:String x:Key="TxtCacheDesc">View and delete downloaded OptiScaler versions from your local storage to free up space.</x:String>
-    <x:String x:Key="TxtManage">📁  Manage</x:String>
+    <x:String x:Key="TxtManage">&#xE8B7;  Manage</x:String>
     <x:String x:Key="TxtLanguage">Application Language</x:String>
     <x:String x:Key="TxtLanguageDesc">Change the user interface language.</x:String>
     <x:String x:Key="TxtClose">Close</x:String>

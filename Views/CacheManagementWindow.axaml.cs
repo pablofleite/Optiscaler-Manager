@@ -28,7 +28,7 @@ namespace OptiscalerClient.Views
 
             // Flicker-free startup strategy
             this.Opacity = 0;
-            
+
             var titleBar = this.FindControl<Border>("TitleBar");
             if (titleBar != null)
             {
@@ -52,7 +52,7 @@ namespace OptiscalerClient.Views
 
             pnlVersions.Children.Clear();
             var versions = _componentService.GetDownloadedOptiScalerVersions();
-            
+
             var txtCacheInfo = this.FindControl<TextBlock>("TxtCacheInfo");
             if (txtCacheInfo != null)
             {
@@ -61,9 +61,9 @@ namespace OptiscalerClient.Views
 
             if (!versions.Any())
             {
-                pnlVersions.Children.Add(new TextBlock 
-                { 
-                    Text = "No versions cached yet.", 
+                pnlVersions.Children.Add(new TextBlock
+                {
+                    Text = "No versions cached yet.",
                     Foreground = Brushes.Gray,
                     HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
                     Margin = new Thickness(0, 40, 0, 0)
@@ -87,18 +87,18 @@ namespace OptiscalerClient.Views
             };
 
             var stack = new StackPanel { VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center };
-            stack.Children.Add(new TextBlock 
-            { 
-                Text = version, 
+            stack.Children.Add(new TextBlock
+            {
+                Text = version,
                 FontWeight = FontWeight.Bold,
                 Foreground = Application.Current?.FindResource("BrTextPrimary") as IBrush ?? Brushes.White
             });
-            
+
             if (version == _componentService.OptiScalerVersion)
             {
-                stack.Children.Add(new TextBlock 
-                { 
-                    Text = "Currently selected", 
+                stack.Children.Add(new TextBlock
+                {
+                    Text = "Currently selected",
                     FontSize = 10,
                     Foreground = Application.Current?.FindResource("BrAccent") as IBrush ?? Brushes.DeepSkyBlue
                 });
@@ -137,7 +137,7 @@ namespace OptiscalerClient.Views
             {
                 var title = "Delete Version";
                 var msg = $"Are you sure you want to delete OptiScaler {ver} from cache?";
-                
+
                 var dialog = new ConfirmDialog(this, title, msg, false);
                 var result = await dialog.ShowDialog<bool>(this);
 

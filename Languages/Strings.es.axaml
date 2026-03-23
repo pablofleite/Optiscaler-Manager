@@ -7,7 +7,7 @@
     <x:String x:Key="TxtAppPrefs">Preferencias de la aplicación</x:String>
     <x:String x:Key="TxtCacheMgmt">Administración de caché local</x:String>
     <x:String x:Key="TxtCacheDesc">Revisa y elimina versiones de OptiScaler descargadas de tu almacenamiento local para liberar espacio.</x:String>
-    <x:String x:Key="TxtManage">📁 Administrar</x:String>
+    <x:String x:Key="TxtManage">&#xE8B7;  Administrar</x:String>
     <x:String x:Key="TxtLanguage">Idioma de la aplicación</x:String>
     <x:String x:Key="TxtLanguageDesc">Cambia el idioma de la interfaz gráfica.</x:String>
     <x:String x:Key="TxtClose">Cerrar</x:String>

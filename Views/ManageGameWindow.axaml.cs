@@ -240,10 +240,13 @@ namespace OptiscalerClient.Views
                 if (btnUninstall != null) btnUninstall.IsEnabled = false;
                 if (cmbOptiVersion != null) cmbOptiVersion.IsEnabled = false;
 
+                bool isDownloadingOpti = true;
                 var progress = new Progress<double>(p =>
                 {
                     Dispatcher.UIThread.Post(() =>
                     {
+                        if (!isDownloadingOpti) return;
+
                         if (bdProgress != null && bdProgress.IsVisible != true)
                             bdProgress.IsVisible = true;
 
@@ -257,6 +260,7 @@ namespace OptiscalerClient.Views
                 try
                 {
                     optiCacheDir = await componentService.DownloadOptiScalerAsync(optiscalerVersion, progress);
+                    isDownloadingOpti = false;
                     
                     // Hide after download finishes
                     Dispatcher.UIThread.Post(() => {
@@ -265,6 +269,7 @@ namespace OptiscalerClient.Views
                 }
                 catch (Exception ex)
                 {
+                    isDownloadingOpti = false;
                     Dispatcher.UIThread.Post(() => {
                         if (bdProgress != null) bdProgress.IsVisible = false;
                     });
@@ -343,6 +348,7 @@ namespace OptiscalerClient.Views
                 // Show extraction status
                 Dispatcher.UIThread.Post(() =>
                 {
+                    if (bdProgress != null) bdProgress.IsVisible = true;
                     if (txtProgressState != null)
                     {
                         var extractFormat = GetResourceString("TxtExtractingFormat", "Extracting and installing v{0}...");
@@ -351,11 +357,13 @@ namespace OptiscalerClient.Views
                     if (prgDownload != null) prgDownload.IsIndeterminate = true;
                 });
 
-                installService.InstallOptiScaler(_game, optiCacheDir, injectionMethod,
-                                                installFakenvapi, fakeCacheDir,
-                                                installNukemFG, nukemCacheDir,
-                                                optiscalerVersion: optiscalerVersion,
-                                                overrideGameDir: overrideGameDir);
+                await Task.Run(() => {
+                    installService.InstallOptiScaler(_game, optiCacheDir, injectionMethod,
+                                                    installFakenvapi, fakeCacheDir,
+                                                    installNukemFG, nukemCacheDir,
+                                                    optiscalerVersion: optiscalerVersion,
+                                                    overrideGameDir: overrideGameDir);
+                });
 
                 var installedComponents = "OptiScaler";
                 if (installFakenvapi) installedComponents += " + Fakenvapi";
