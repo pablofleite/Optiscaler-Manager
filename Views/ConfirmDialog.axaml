@@ -4,7 +4,7 @@
         Title="Confirm"
         Width="440"
         Height="220"
-        WindowStartupLocation="Manual"
+        WindowStartupLocation="CenterOwner"
         SystemDecorations="None"
         TransparencyLevelHint="Transparent"
         Background="Transparent"
