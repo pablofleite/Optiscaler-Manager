@@ -152,6 +152,18 @@
     <x:String x:Key="TxtAnimations">Включить анимации</x:String>
     <x:String x:Key="TxtAnimationsDesc">Включить плавные переходы и анимации во всем интерфейсе</x:String>
 
+    <!-- Scan Sources -->
+    <x:String x:Key="TxtManageScanSources">Управление источниками сканирования</x:String>
+    <x:String x:Key="TxtManageScanSourcesDesc">Настройте, какие платформы и папки сканировать для игр</x:String>
+    <x:String x:Key="TxtDefaultSources">Источники по умолчанию</x:String>
+    <x:String x:Key="TxtCustomFolders">Пользовательские папки</x:String>
+    <x:String x:Key="TxtAddFolder">+ Добавить папку</x:String>
+    <x:String x:Key="TxtNoCustomFolders">Пользовательские папки еще не добавлены.</x:String>
+    <x:String x:Key="TxtRemove">Удалить</x:String>
+    <x:String x:Key="TxtSave">Сохранить</x:String>
+    <x:String x:Key="TxtScanSources">Источники сканирования</x:String>
+    <x:String x:Key="TxtScanSourcesDesc">Управление платформами и пользовательскими папками для сканирования</x:String>
+
     <!-- App Update -->
     <x:String x:Key="TxtUpdateAvailableTitle">Доступно обновление</x:String>
     <x:String x:Key="TxtUpdateAvailableMsg">Доступна новая версия Optiscaler Client (v{0}).&#x0a;Хотите загрузить и установить ее сейчас?</x:String>

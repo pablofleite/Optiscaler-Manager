@@ -151,6 +151,20 @@
     <x:String x:Key="TxtAutoScanDesc">시작 시 목록이 비어 있으면 자동으로 게임을 스캔합니다.</x:String>
     <x:String x:Key="TxtAnimations">애니메이션 활성화</x:String>
     <x:String x:Key="TxtAnimationsDesc">전체 인터페이스에서 부드러운 전환 및 애니메이션 활성화</x:String>
+    <x:String x:Key="TxtBetaVersions">베타 버전 표시</x:String>
+    <x:String x:Key="TxtBetaVersionsDesc">선택기에 OptiScaler 베타 버전을 포함합니다. 베타는 불안정할 수 있습니다.</x:String>
+
+    <!-- Scan Sources -->
+    <x:String x:Key="TxtManageScanSources">스캔 소스 관리</x:String>
+    <x:String x:Key="TxtManageScanSourcesDesc">게임을 스캔할 플랫폼 및 폴더 구성</x:String>
+    <x:String x:Key="TxtDefaultSources">기본 소스</x:String>
+    <x:String x:Key="TxtCustomFolders">사용자 지정 폴더</x:String>
+    <x:String x:Key="TxtAddFolder">+ 폴더 추가</x:String>
+    <x:String x:Key="TxtNoCustomFolders">아직 사용자 지정 폴더가 추가되지 않았습니다.</x:String>
+    <x:String x:Key="TxtRemove">제거</x:String>
+    <x:String x:Key="TxtSave">저장</x:String>
+    <x:String x:Key="TxtScanSources">스캔 소스</x:String>
+    <x:String x:Key="TxtScanSourcesDesc">스캔할 플랫폼 및 사용자 지정 폴더 관리</x:String>
 
     <!-- App Update -->
     <x:String x:Key="TxtUpdateAvailableTitle">업데이트 가능</x:String>

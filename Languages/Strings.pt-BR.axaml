@@ -150,6 +150,18 @@
     <x:String x:Key="TxtAnimations">Ativar animações</x:String>
     <x:String x:Key="TxtAnimationsDesc">Ativar transições suaves e animações em toda a interface</x:String>
 
+    <!-- Scan Sources -->
+    <x:String x:Key="TxtManageScanSources">Gerenciar fontes de verificação</x:String>
+    <x:String x:Key="TxtManageScanSourcesDesc">Configurar quais plataformas e pastas verificar para jogos</x:String>
+    <x:String x:Key="TxtDefaultSources">Fontes padrão</x:String>
+    <x:String x:Key="TxtCustomFolders">Pastas personalizadas</x:String>
+    <x:String x:Key="TxtAddFolder">+ Adicionar pasta</x:String>
+    <x:String x:Key="TxtNoCustomFolders">Nenhuma pasta personalizada adicionada ainda.</x:String>
+    <x:String x:Key="TxtRemove">Remover</x:String>
+    <x:String x:Key="TxtSave">Salvar</x:String>
+    <x:String x:Key="TxtScanSources">Fontes de verificação</x:String>
+    <x:String x:Key="TxtScanSourcesDesc">Gerenciar plataformas e pastas personalizadas para verificar</x:String>
+
     <!-- App Update -->
     <x:String x:Key="TxtUpdateAvailableTitle">Atualização disponível</x:String>
     <x:String x:Key="TxtUpdateAvailableMsg">Uma nova versão do Optiscaler Client está disponível (v{0}).&#x0a;Deseja baixar e instalar agora?</x:String>

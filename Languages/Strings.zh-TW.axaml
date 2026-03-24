@@ -152,6 +152,18 @@
     <x:String x:Key="TxtAnimations">啟用動畫</x:String>
     <x:String x:Key="TxtAnimationsDesc">在整個介面中啟用平滑轉場和動畫</x:String>
 
+    <!-- Scan Sources -->
+    <x:String x:Key="TxtManageScanSources">管理掃描來源</x:String>
+    <x:String x:Key="TxtManageScanSourcesDesc">配置要掃描遊戲的平台和資料夾</x:String>
+    <x:String x:Key="TxtDefaultSources">預設來源</x:String>
+    <x:String x:Key="TxtCustomFolders">自訂資料夾</x:String>
+    <x:String x:Key="TxtAddFolder">+ 新增資料夾</x:String>
+    <x:String x:Key="TxtNoCustomFolders">尚未新增自訂資料夾。</x:String>
+    <x:String x:Key="TxtRemove">移除</x:String>
+    <x:String x:Key="TxtSave">儲存</x:String>
+    <x:String x:Key="TxtScanSources">掃描來源</x:String>
+    <x:String x:Key="TxtScanSourcesDesc">管理要掃描的平台和自訂資料夾</x:String>
+
     <!-- App Update -->
     <x:String x:Key="TxtUpdateAvailableTitle">更新可用</x:String>
     <x:String x:Key="TxtUpdateAvailableMsg">Optiscaler Client的新版本可用（v{0}）。&#x0a;您想現在下载並安裝嗎？</x:String>

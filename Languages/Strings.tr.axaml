@@ -152,6 +152,18 @@
     <x:String x:Key="TxtAnimations">Animasyonları etkinleştir</x:String>
     <x:String x:Key="TxtAnimationsDesc">Arayüz genelinde yumuşak geçişler ve animasyonları etkinleştir</x:String>
 
+    <!-- Scan Sources -->
+    <x:String x:Key="TxtManageScanSources">Tarama kaynaklarını yönet</x:String>
+    <x:String x:Key="TxtManageScanSourcesDesc">Oyunlar için hangi platformların ve klasörlerin taranacağını yapılandır</x:String>
+    <x:String x:Key="TxtDefaultSources">Varsayılan kaynaklar</x:String>
+    <x:String x:Key="TxtCustomFolders">Özel klasörler</x:String>
+    <x:String x:Key="TxtAddFolder">+ Klasör ekle</x:String>
+    <x:String x:Key="TxtNoCustomFolders">Henüz özel klasör eklenmedi.</x:String>
+    <x:String x:Key="TxtRemove">Kaldır</x:String>
+    <x:String x:Key="TxtSave">Kaydet</x:String>
+    <x:String x:Key="TxtScanSources">Tarama kaynakları</x:String>
+    <x:String x:Key="TxtScanSourcesDesc">Taranacak platformları ve özel klasörleri yönet</x:String>
+
     <!-- App Update -->
     <x:String x:Key="TxtUpdateAvailableTitle">Güncelleme Mevcut</x:String>
     <x:String x:Key="TxtUpdateAvailableMsg">Optiscaler Client'ın yeni bir sürümü mevcut (v{0}).&#x0a;Şimdi indirmek ve yüklemek ister misiniz?</x:String>

@@ -151,6 +151,20 @@
     <x:String x:Key="TxtAutoScanDesc">Scan automatisch voor games als de lijst leeg is bij opstarten.</x:String>
     <x:String x:Key="TxtAnimations">Activeer animaties</x:String>
     <x:String x:Key="TxtAnimationsDesc">Activeer soepele overgangen en animaties in de hele interface</x:String>
+    <x:String x:Key="TxtBetaVersions">Beta-versies weergeven</x:String>
+    <x:String x:Key="TxtBetaVersionsDesc">Beta-versies van OptiScaler opnemen in de selector. Betas kunnen instabiel zijn.</x:String>
+
+    <!-- Scan Sources -->
+    <x:String x:Key="TxtManageScanSources">Scanbronnen beheren</x:String>
+    <x:String x:Key="TxtManageScanSourcesDesc">Configureer welke platforms en mappen te scannen voor games</x:String>
+    <x:String x:Key="TxtDefaultSources">Standaardbronnen</x:String>
+    <x:String x:Key="TxtCustomFolders">Aangepaste mappen</x:String>
+    <x:String x:Key="TxtAddFolder">+ Map toevoegen</x:String>
+    <x:String x:Key="TxtNoCustomFolders">Nog geen aangepaste mappen toegevoegd.</x:String>
+    <x:String x:Key="TxtRemove">Verwijderen</x:String>
+    <x:String x:Key="TxtSave">Opslaan</x:String>
+    <x:String x:Key="TxtScanSources">Scanbronnen</x:String>
+    <x:String x:Key="TxtScanSourcesDesc">Beheer platforms en aangepaste mappen om te scannen</x:String>
 
     <!-- App Update -->
     <x:String x:Key="TxtUpdateAvailableTitle">Update Beschikbaar</x:String>

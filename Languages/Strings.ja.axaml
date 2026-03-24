@@ -152,6 +152,18 @@
     <x:String x:Key="TxtAnimations">アニメーションを有効にする</x:String>
     <x:String x:Key="TxtAnimationsDesc">インターフェース全体で滑らかな遷移とアニメーションを有効にします</x:String>
 
+    <!-- Scan Sources -->
+    <x:String x:Key="TxtManageScanSources">スキャンソースの管理</x:String>
+    <x:String x:Key="TxtManageScanSourcesDesc">ゲームをスキャンするプラットフォームとフォルダーを設定</x:String>
+    <x:String x:Key="TxtDefaultSources">デフォルトソース</x:String>
+    <x:String x:Key="TxtCustomFolders">カスタムフォルダー</x:String>
+    <x:String x:Key="TxtAddFolder">+ フォルダーを追加</x:String>
+    <x:String x:Key="TxtNoCustomFolders">カスタムフォルダーはまだ追加されていません。</x:String>
+    <x:String x:Key="TxtRemove">削除</x:String>
+    <x:String x:Key="TxtSave">保存</x:String>
+    <x:String x:Key="TxtScanSources">スキャンソース</x:String>
+    <x:String x:Key="TxtScanSourcesDesc">スキャンするプラットフォームとカスタムフォルダーを管理</x:String>
+
     <!-- App Update -->
     <x:String x:Key="TxtUpdateAvailableTitle">更新利用可能</x:String>
     <x:String x:Key="TxtUpdateAvailableMsg">Optiscaler Clientの新しいバージョンが利用可能です（v{0}）。&#x0a;今すぐダウンロードしてインストールしますか？</x:String>

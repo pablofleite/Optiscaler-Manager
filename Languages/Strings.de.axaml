@@ -152,6 +152,18 @@
     <x:String x:Key="TxtAnimations">Animationen aktivieren</x:String>
     <x:String x:Key="TxtAnimationsDesc">Fließende Übergänge und Animationen in der gesamten Benutzeroberfläche aktivieren</x:String>
 
+    <!-- Scan Sources -->
+    <x:String x:Key="TxtManageScanSources">Scan-Quellen verwalten</x:String>
+    <x:String x:Key="TxtManageScanSourcesDesc">Konfigurieren Sie, welche Plattformen und Ordner nach Spielen durchsucht werden sollen</x:String>
+    <x:String x:Key="TxtDefaultSources">Standardquellen</x:String>
+    <x:String x:Key="TxtCustomFolders">Benutzerdefinierte Ordner</x:String>
+    <x:String x:Key="TxtAddFolder">+ Ordner hinzufügen</x:String>
+    <x:String x:Key="TxtNoCustomFolders">Noch keine benutzerdefinierten Ordner hinzugefügt.</x:String>
+    <x:String x:Key="TxtRemove">Entfernen</x:String>
+    <x:String x:Key="TxtSave">Speichern</x:String>
+    <x:String x:Key="TxtScanSources">Scan-Quellen</x:String>
+    <x:String x:Key="TxtScanSourcesDesc">Plattformen und benutzerdefinierte Ordner zum Scannen verwalten</x:String>
+
     <!-- App Update -->
     <x:String x:Key="TxtUpdateAvailableTitle">Update verfügbar</x:String>
     <x:String x:Key="TxtUpdateAvailableMsg">Eine neue Version von Optiscaler Client ist verfügbar (v{0}).&#x0a;Möchten Sie sie jetzt herunterladen und installieren?</x:String>
