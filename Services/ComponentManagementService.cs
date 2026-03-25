@@ -30,6 +30,7 @@ namespace OptiscalerClient.Services
         private static System.Collections.Generic.List<string>? _cachedOptiScalerVersions = null;
         private static System.Collections.Generic.HashSet<string> _cachedBetaVersions = new();
         private static string? _cachedLatestBetaVersion = null;
+        private static string? _cachedLatestStableVersion = null;
         private static string? _cachedFakenvapiVersion = null;
         private static string? _cachedNukemFGVersion = null;
         private static DateTime _lastApiCheckTime = DateTime.MinValue;
@@ -38,6 +39,7 @@ namespace OptiscalerClient.Services
             => _cachedOptiScalerVersions ?? GetDownloadedOptiScalerVersions();
         public System.Collections.Generic.HashSet<string> BetaVersions => _cachedBetaVersions;
         public string? LatestBetaVersion => _cachedLatestBetaVersion;
+        public string? LatestStableVersion => _cachedLatestStableVersion;
 
         public string? OptiScalerVersion => _localVersions.OptiScalerVersion;
         public string? FakenvapiVersion => _localVersions.FakenvapiVersion;
@@ -158,12 +160,13 @@ namespace OptiscalerClient.Services
 
                     await Task.WhenAll(optiVersionsTask, optiBetasTask, fakeTask, nukemTask);
 
-                    var stableVersions = await optiVersionsTask;
-                    var betaVersions = await optiBetasTask;
+                    var (stableVersions, latestStable) = await optiVersionsTask;
+                    var (betaVersions, latestBeta) = await optiBetasTask;
 
-                    // Track which versions are betas
+                    // Track which versions are betas and latest versions
                     _cachedBetaVersions = new System.Collections.Generic.HashSet<string>(betaVersions ?? new());
-                    _cachedLatestBetaVersion = betaVersions?.FirstOrDefault();
+                    _cachedLatestBetaVersion = latestBeta ?? betaVersions?.FirstOrDefault();
+                    _cachedLatestStableVersion = latestStable ?? stableVersions?.FirstOrDefault();
 
                     // Merge stable and beta versions, removing duplicates
                     var allVersions = new System.Collections.Generic.List<string>();
@@ -188,8 +191,8 @@ namespace OptiscalerClient.Services
                 }
                 else
                 {
-                    // Default to latest stable LTSC version
-                    _remoteVersions.OptiScalerVersion = OptiScalerAvailableVersions.FirstOrDefault(v => !v.Contains("nightly", StringComparison.OrdinalIgnoreCase)) ?? OptiScalerAvailableVersions.FirstOrDefault();
+                    // Default to latest stable version from GitHub
+                    _remoteVersions.OptiScalerVersion = _cachedLatestStableVersion ?? OptiScalerAvailableVersions.FirstOrDefault();
                 }
                 _remoteVersions.FakenvapiVersion = _cachedFakenvapiVersion;
                 _remoteVersions.NukemFGVersion = _cachedNukemFGVersion;
@@ -241,16 +244,17 @@ namespace OptiscalerClient.Services
             return null;
         }
 
-        private async Task<System.Collections.Generic.List<string>> FetchAllComponentVersionsAsync(RepositoryConfig config)
+        private async Task<(System.Collections.Generic.List<string> versions, string? latestVersion)> FetchAllComponentVersionsAsync(RepositoryConfig config)
         {
             var versions = new System.Collections.Generic.List<string>();
+            string? latestVersion = null;
             var repoLabel = $"{config.RepoOwner}/{config.RepoName}";
             try
             {
                 if (string.IsNullOrEmpty(config.RepoOwner) || string.IsNullOrEmpty(config.RepoName))
                 {
                     DebugWindow.Log($"[FetchVersions] Skipping {repoLabel}: empty config");
-                    return versions;
+                    return (versions, latestVersion);
                 }
 
                 var url = $"https://api.github.com/repos/{config.RepoOwner}/{config.RepoName}/releases?per_page=30";
@@ -271,6 +275,13 @@ namespace OptiscalerClient.Services
                             if (version.StartsWith("v", StringComparison.OrdinalIgnoreCase))
                                 version = version.Substring(1);
                             versions.Add(version);
+                            
+                            // Check if this is marked as latest release
+                            if (latestVersion == null && element.TryGetProperty("prerelease", out var prerelease) && !prerelease.GetBoolean())
+                            {
+                                latestVersion = version;
+                                DebugWindow.Log($"[FetchVersions] {repoLabel} → Latest stable: {latestVersion}");
+                            }
                         }
                     }
                 }
@@ -281,7 +292,7 @@ namespace OptiscalerClient.Services
                 DebugWindow.Log($"[FetchVersions] {repoLabel} → ERROR: {ex.Message}");
             }
 
-            return versions;
+            return (versions, latestVersion);
         }
 
         private bool IsUpdateAvailable(string? localVersion, string? remoteVersion)

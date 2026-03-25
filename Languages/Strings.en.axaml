@@ -31,6 +31,7 @@
     <x:String x:Key="TxtAppTitle">Optiscaler Client</x:String>
     <x:String x:Key="TxtBtnScan">⟳  Scan Games</x:String>
     <x:String x:Key="TxtBtnAddManual">＋  Add Manually</x:String>
+    <x:String x:Key="TxtBtnBulkInstall">⚡  Bulk Install</x:String>
     <x:String x:Key="TxtTipSettings">Settings</x:String>
     <x:String x:Key="TxtTipComponent">Component versions</x:String>
     <x:String x:Key="TxtUpdateNukem">↑  Update NukemFG</x:String>
@@ -176,5 +177,18 @@
     <x:String x:Key="TxtUpdateError">Update Error</x:String>
     <x:String x:Key="TxtNoUpdateFound">The application is already up to date.</x:String>
     <x:String x:Key="TxtUpdateCheckError">There was a problem checking for updates. Please try again later.</x:String>
+
+    <!-- BulkInstallWindow -->
+    <x:String x:Key="TxtBulkInstallWindow">Bulk Install OptiScaler</x:String>
+    <x:String x:Key="TxtSelectAll">Select All</x:String>
+    <x:String x:Key="TxtInstalled">Installed</x:String>
+    <x:String x:Key="TxtInstallationSettings">Installation Settings</x:String>
+    <x:String x:Key="TxtVersion">Version</x:String>
+    <x:String x:Key="TxtInstallFakenvapi">Install Fakenvapi</x:String>
+    <x:String x:Key="TxtInstallNukemFG">Install NukemFG</x:String>
+    <x:String x:Key="TxtCreateBackup">Create backup</x:String>
+    <x:String x:Key="TxtInstallSelected">Install Selected</x:String>
+    <x:String x:Key="TxtNoGames">No Games</x:String>
+    <x:String x:Key="TxtNoGamesFound">No games found. Please scan for games first.</x:String>
 
 </ResourceDictionary>

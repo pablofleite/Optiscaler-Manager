@@ -31,6 +31,7 @@
     <x:String x:Key="TxtAppTitle">Optiscaler Client</x:String>
     <x:String x:Key="TxtBtnScan">⟳ Escanear Juegos</x:String>
     <x:String x:Key="TxtBtnAddManual">＋ Añadir Manualmente</x:String>
+    <x:String x:Key="TxtBtnBulkInstall">⚡ Instalación Masiva</x:String>
     <x:String x:Key="TxtTipSettings">Ajustes</x:String>
     <x:String x:Key="TxtTipComponent">Versiones de componentes</x:String>
     <x:String x:Key="TxtUpdateNukem">↑ Actualizar NukemFG</x:String>
@@ -174,5 +175,18 @@
     <x:String x:Key="TxtUpdateError">Error de actualización</x:String>
     <x:String x:Key="TxtNoUpdateFound">La aplicación ya está actualizada.</x:String>
     <x:String x:Key="TxtUpdateCheckError">Hubo un problema al buscar actualizaciones. Por favor, inténtalo de nuevo más tarde.</x:String>
+
+    <!-- BulkInstallWindow -->
+    <x:String x:Key="TxtBulkInstallWindow">Instalación Masiva de OptiScaler</x:String>
+    <x:String x:Key="TxtSelectAll">Seleccionar Todo</x:String>
+    <x:String x:Key="TxtInstalled">Instalado</x:String>
+    <x:String x:Key="TxtInstallationSettings">Configuración de Instalación</x:String>
+    <x:String x:Key="TxtVersion">Versión</x:String>
+    <x:String x:Key="TxtInstallFakenvapi">Instalar Fakenvapi</x:String>
+    <x:String x:Key="TxtInstallNukemFG">Instalar NukemFG</x:String>
+    <x:String x:Key="TxtCreateBackup">Crear respaldo</x:String>
+    <x:String x:Key="TxtInstallSelected">Instalar Seleccionados</x:String>
+    <x:String x:Key="TxtNoGames">Sin Juegos</x:String>
+    <x:String x:Key="TxtNoGamesFound">No se encontraron juegos. Por favor, escanea primero.</x:String>
 
 </ResourceDictionary>

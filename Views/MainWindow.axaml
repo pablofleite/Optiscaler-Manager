@@ -126,7 +126,14 @@
                                      Content="{DynamicResource TxtBtnAddManual}"
                                      Classes="BtnBase"
                                      Padding="14,7"
+                                     Margin="0,0,10,0"
                                      Click="BtnAddManual_Click"/>
+         
+                             <Button Name="BtnBulkInstall"
+                                     Content="{DynamicResource TxtBtnBulkInstall}"
+                                     Classes="BtnBase"
+                                     Padding="14,7"
+                                     Click="BtnBulkInstall_Click"/>
                          </StackPanel>
 
                          <!-- Middle: Search Bar -->
@@ -376,6 +383,15 @@
                                                      </Style>
                                                  </Button.Styles>
                                              </Button>
+                                             <Button Name="BtnFastInstall"
+                                                    Classes="BtnBase"
+                                                    Padding="16,8"
+                                                    Margin="0,0,8,0"
+                                                    VerticalAlignment="Center"
+                                                    Foreground="{StaticResource BrAccent}"
+                                                    Content="✦ Fast Install"
+                                                    Click="BtnFastInstall_Click"
+                                                    Loaded="BtnFastInstall_Loaded"/>
                                              <Button Content="{DynamicResource TxtManageGame}"
                                                      Classes="BtnBase"
                                                      Padding="20,8"

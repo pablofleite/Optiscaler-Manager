@@ -160,24 +160,24 @@ namespace OptiscalerClient.Views
                 int selectedIndex = 0;
                 int currentIndex = 0;
 
-                // Determine what is truly "latest" - beta takes precedence if it exists
+                // Determine what is truly "latest" - only stable versions get LATEST badge
                 bool hasBeta = !string.IsNullOrEmpty(latestBeta);
                 
-                // 1. Latest beta at top (if present) - this is the LATEST overall
+                // 1. Latest beta at top (if present) - NO LATEST badge for beta
                 if (hasBeta && latestBeta != null)
                 {
-                    cmbOptiVersion.Items.Add(BuildVersionItem(latestBeta, isBeta: true, isLatest: true));
+                    cmbOptiVersion.Items.Add(BuildVersionItem(latestBeta, isBeta: true, isLatest: false));
                     currentIndex++;
                 }
 
-                // 2. Stable versions — first stable gets "LATEST" badge only if no beta exists
+                // 2. Stable versions — first stable gets "LATEST" badge
                 bool isLatestStableMarked = false;
                 foreach (var ver in stableVersions)
                 {
                     bool isFirstStable = !isLatestStableMarked && !ver.Contains("nightly", StringComparison.OrdinalIgnoreCase);
                     
-                    // Mark as latest stable if this is the first stable version AND no beta exists
-                    bool shouldMarkAsLatest = isFirstStable && !hasBeta;
+                    // Mark as latest stable if this is the first stable version
+                    bool shouldMarkAsLatest = isFirstStable;
                     
                     if (isFirstStable)
                     {
